@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #aa1d1d;
+        }
+        input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hi visitors!</h1>
+    <input type="text" id="accessCode" placeholder="Entrez le code d'accès" />
+    <button onclick="validateCode()">Valider</button>
+
+    <script>
+        function validateCode() {
+            const code = document.getElementById('accessCode').value;
+            if (code === '1401') {
+                window.location.href = 'https://boite-a-idees-4e.glitch.me/';
+            } else {
+                alert('Code d\'accès incorrect. Veuillez réessayer.');
+            }
+        }
+    </script>
+
+</body>
+</html>
+<h1>Created by Emil Ollivier </h1>
